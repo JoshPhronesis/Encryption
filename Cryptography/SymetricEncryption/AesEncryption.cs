@@ -6,18 +6,18 @@ public static class AesEncryption
 {
     public static byte[] Encrypt(byte[] data, byte[] key, byte[] initializationVector)
     {
-        using var encryptor = Aes.Create();
-        encryptor.Key = key;
-        var encryptedData = encryptor.EncryptCbc(data, initializationVector);
+        using var aes = Aes.Create();
+        aes.Key = key;
+        var encryptedData = aes.EncryptCbc(data, initializationVector);
         
         return encryptedData;
     }
     
     public static byte[] Decrypt(byte[] data,  byte[] key, byte[] initializationVector)
     {
-        using var encryptor = Aes.Create();
-        encryptor.Key = key;
-        var decryptedData = encryptor.DecryptCbc(data, initializationVector);
+        using var aes = Aes.Create();
+        aes.Key = key;
+        var decryptedData = aes.DecryptCbc(data, initializationVector);
         
         return decryptedData;
     }
