@@ -9,7 +9,7 @@ public static class Extensions
         return Encoding.UTF8.GetBytes(input);
     }
 
-    public static string ToMessage(this byte[] data)
+    public static string BytesToString(this byte[] data)
     {
         return Encoding.UTF8.GetString(data);
     }
