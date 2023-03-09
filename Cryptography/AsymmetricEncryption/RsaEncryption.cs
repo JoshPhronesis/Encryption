@@ -15,6 +15,10 @@ public class RsaEncryption
     {
         return _rsa.Encrypt(dataToEncrypt.ToBytes(), RSAEncryptionPadding.OaepSHA256);
     }
+    public byte[] Encrypt(byte[] dataToEncrypt)
+    {
+        return _rsa.Encrypt(dataToEncrypt, RSAEncryptionPadding.OaepSHA256);
+    }
     public byte[] Decrypt(byte[] dataToDecrypt)
     {
         return _rsa.Decrypt(dataToDecrypt, RSAEncryptionPadding.OaepSHA256);

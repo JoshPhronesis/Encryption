@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 
-namespace Cryptography.SymetricEncryption;
+namespace Cryptography.SymmetricEncryption;
 
 public static class AesEncryption
 {
